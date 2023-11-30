@@ -1,6 +1,5 @@
 const likeBtn = document.querySelectorAll(".fa-heart");
 const addBtn = document.querySelectorAll(".addCart");
-// const badge = document.querySelector(".badge");
 const badge2 = document.querySelector(".badge2");
 const badgeCon = document.querySelectorAll(".badgeCon");
 const dialog = document.querySelector("dialog");
@@ -9,8 +8,6 @@ const cart = document.querySelector(".cart");
 const body = document.querySelector("body");
 const itemCon = document.querySelector(".itemCon");
 const total = document.querySelector(".spaced2 h4 span");
-
-// const message = document.createElement("h2");
 
 body.addEventListener("click", (e) => {
   if (e.target.className == "remove") {
@@ -47,7 +44,7 @@ closeModal.addEventListener("click", () => {
 addBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     badge2.textContent++;
-    // badge1.textContent++;
+    // Create the new item and add to the cart
     const parent = btn.parentNode;    
     const img = document.createElement("img");
     img.src = parent.children[0].getAttribute("src");
@@ -91,11 +88,8 @@ addBtn.forEach((btn) => {
   });
 });
 
-// remove.addEventListener('click', (e) => {
-//     itemCon.removeChild(e.target.parentElement);
-// })
-
 likeBtn.forEach((btn) => {
+  // Functionality for the like button
   btn.addEventListener("click", () => {
     btn.classList.toggle("fa-solid");
     btn.classList.toggle("bop");
